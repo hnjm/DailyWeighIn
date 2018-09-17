@@ -148,7 +148,7 @@ public class GUI {
 						//String pythonScriptPath = "/home/norbert/python/helloPython.py";
 						String[] cmd = new String[2];
 						cmd[0] = "python"; // check version of installed python: python -V
-						cmd[1] = "Plot.py";
+						cmd[1] = "Plot7.py";
 						 
 						// create runtime to execute external command
 						Runtime rt = Runtime.getRuntime();
@@ -159,6 +159,33 @@ public class GUI {
 							e1.printStackTrace();
 						}
 						
+						// set up the command and parameter
+						//String pythonScriptPath = "/home/norbert/python/helloPython.py";
+						cmd[0] = "python"; // check version of installed python: python -V
+						cmd[1] = "Plot28.py";
+						 
+						// create runtime to execute external command
+						//rt = Runtime.getRuntime();
+						try {
+							Process pr = rt.exec(cmd);
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						
+						// set up the command and parameter
+						//String pythonScriptPath = "/home/norbert/python/helloPython.py";
+						cmd[0] = "python"; // check version of installed python: python -V
+						cmd[1] = "Plot365.py";
+						 
+						// create runtime to execute external command
+						//Runtime rt = Runtime.getRuntime();
+						try {
+							Process pr = rt.exec(cmd);
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
 						
 						
 						//Put Java to sleep while Python works its magic
