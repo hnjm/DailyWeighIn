@@ -54,7 +54,7 @@ public class GUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 581);
+		frame.setBounds(100, 100, 812, 962);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -228,29 +228,29 @@ public class GUI {
 				}
 			}
 		});
-		btnPush.setBounds(265, 68, 117, 29);
+		btnPush.setBounds(433, 40, 117, 29);
 		frame.getContentPane().add(btnPush);
 		
 		txtWeighIn = new JTextField();
-		txtWeighIn.setBounds(60, 68, 130, 26);
+		txtWeighIn.setBounds(228, 40, 130, 26);
 		frame.getContentPane().add(txtWeighIn);
 		txtWeighIn.setColumns(10);
 		txtWeighIn.setHorizontalAlignment(JTextField.RIGHT);
 
 		
 		JLabel lblWhatDoYou = new JLabel("What do you weigh today?");
-		lblWhatDoYou.setBounds(60, 39, 322, 16);
+		lblWhatDoYou.setBounds(228, 11, 322, 16);
 		frame.getContentPane().add(lblWhatDoYou);
 		lblWhatDoYou.setHorizontalAlignment(JLabel.CENTER);
 		
 		JLabel lblKg = new JLabel("kg");
 		lblKg.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		lblKg.setBounds(192, 73, 61, 16);
+		lblKg.setBounds(360, 45, 61, 16);
 		frame.getContentPane().add(lblKg);
 		
 		JLabel lbl7 = new JLabel("Future Graph 7");
 		lbl7.setBackground(Color.WHITE);
-		lbl7.setBounds(60, 109, 322, 135);
+		lbl7.setBounds(60, 72, 660, 276);
 		frame.getContentPane().add(lbl7);
 		
 		//Adding graph
@@ -275,7 +275,7 @@ public class GUI {
 		
 		JLabel lbl28 = new JLabel("Future Graph 28");
 		lbl28.setBackground(Color.LIGHT_GRAY);
-		lbl28.setBounds(60, 249, 322, 135);
+		lbl28.setBounds(60, 359, 660, 276);
 		frame.getContentPane().add(lbl28);
 		
 		//Adding graph
@@ -297,7 +297,7 @@ public class GUI {
 
 		JLabel lbl365 = new JLabel("Future Graph 365");
 		lbl365.setBackground(Color.WHITE);
-		lbl365.setBounds(60, 396, 322, 135);
+		lbl365.setBounds(60, 646, 660, 276);
 		frame.getContentPane().add(lbl365);
 		
 		BufferedImage ThreeSixFive = null;
