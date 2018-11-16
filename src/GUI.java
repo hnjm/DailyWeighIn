@@ -246,6 +246,13 @@ public class GUI {
 							e1.printStackTrace();
 						}
 						
+						//Now that the first graphing script has been called, I want to wait until it is complete
+						//before starting the next. 
+						
+						while(Graph7PNG.exists() == false)
+						{
+							//Do nothing!
+						}
 						// set up the command and parameter
 						cmd[0] = "python"; // check version of installed python: python -V
 						cmd[1] = "Plot28.py";
@@ -257,6 +264,14 @@ public class GUI {
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
+						}
+						
+						//Again, the graphing script has been called and I want to wait until it is complete
+						//before starting the final graph
+						
+						while(Graph28PNG.exists() == false)
+						{
+							//Do nothing!
 						}
 						
 						// set up the command and parameter
