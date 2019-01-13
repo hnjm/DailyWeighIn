@@ -322,13 +322,17 @@ public class GUI {
 								System.out.println("Graphs updated!");
 								GraphsUpdated = true;
 								
-								//Time to commit to Git via Python!
-								// set up the command and parameter
-								cmd[0] = "python"; // check version of installed python: python -V
-								cmd[1] = "CommitToGit.py";
-								 
+								//Time to commit to Git and then update x4iiiis.com, all via Python!
+								//To do so, we run the command 'python CommitToGit.py' followed by the current weight variable (converted to a string),
+								//And the current directory that we are in so that the script can navigate to the working directory
+								String[] cmd2 = new String[4];
+								cmd2[0] = "python"; 
+								cmd2[1] = "CommitToGit.py";
+								cmd2[2] = Double.toString(CurrentWeight);
+								cmd2[3] = System.getProperty("user.dir");
+								
 								try {
-									Process pr = rt.exec(cmd);
+									Process pr = rt.exec(cmd2);
 								} catch (IOException e1) {
 									// TODO Auto-generated catch block
 									e1.printStackTrace();

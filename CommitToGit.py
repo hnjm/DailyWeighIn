@@ -1,5 +1,11 @@
-import time, datetime
+import time, datetime, sys
 from pynput.keyboard import Key, Controller
+
+#Java application will pass the new weigh in to this script
+#This script doesn't actually use it, but will pass it on to
+#UpdateWebsite.py so that it can be added to the website's database
+weight = sys.argv[1]
+currentDirectory = sys.argv[2]
 
 keyboard = Controller()
 
@@ -18,7 +24,7 @@ keyboard.release(Key.enter)
 
 #Change directory to the weigh-ins folder
 time.sleep(2)
-keyboard.type(r"cd C:\Users\ryan_\Desktop\DailyWeighIn\DailyWeighIn")
+keyboard.type(r'cd "' + currentDirectory + '"')
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
 
@@ -28,7 +34,7 @@ keyboard.type("git add .")
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
 
-#Commit to git with today's date and a loving description
+#Commit to Git with today's date and a loving description
 time.sleep(2)
 today = datetime.datetime.now()
 keyboard.type('git commit -m "')
@@ -42,9 +48,13 @@ time.sleep(2)
 keyboard.type('git push origin master')
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
+#Run UpdateWebsite.py, passing on the new weigh-in variable
+time.sleep(5)
+keyboard.type("python UpdateWebsite.py " + weight)
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
 
 #Close CMD
-time.sleep(2)
 keyboard.type('exit')
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
