@@ -321,6 +321,19 @@ public class GUI {
 								
 								System.out.println("Graphs updated!");
 								GraphsUpdated = true;
+								
+								//Time to commit to Git via Python!
+								// set up the command and parameter
+								cmd[0] = "python"; // check version of installed python: python -V
+								cmd[1] = "CommitToGit.py";
+								 
+								try {
+									Process pr = rt.exec(cmd);
+								} catch (IOException e1) {
+									// TODO Auto-generated catch block
+									e1.printStackTrace();
+								}
+								
 							}
 							catch(Exception PythonNotFinishedOrImageDoesNotExist) {
 								//System.out.println("GraphsUpdated = false...");
