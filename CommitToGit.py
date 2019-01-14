@@ -48,6 +48,7 @@ time.sleep(2)
 keyboard.type('git push origin master')
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
+
 #Run UpdateWebsite.py, passing on the new weigh-in variable
 time.sleep(5)
 keyboard.type("python UpdateWebsite.py " + weight)
