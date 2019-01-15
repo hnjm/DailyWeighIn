@@ -50,7 +50,7 @@ keyboard.press(Key.enter)
 keyboard.release(Key.enter)
 
 #Run UpdateWebsite.py, passing on the new weigh-in variable
-time.sleep(5)
+time.sleep(10)
 keyboard.type("python UpdateWebsite.py " + weight)
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
