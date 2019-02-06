@@ -333,6 +333,11 @@ public class GUI {
 								
 								try {
 									Process pr = rt.exec(cmd2);
+									
+									//Java is no longer needed at this point, so let's shut down the application
+									System.out.println("Java app closing down . . .");
+									System.exit(0);
+									
 								} catch (IOException e1) {
 									// TODO Auto-generated catch block
 									e1.printStackTrace();

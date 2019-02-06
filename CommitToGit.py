@@ -54,8 +54,3 @@ time.sleep(10)
 keyboard.type("python UpdateWebsite.py " + weight)
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
-
-#Close CMD
-keyboard.type('exit')
-keyboard.press(Key.enter)
-keyboard.release(Key.enter)
