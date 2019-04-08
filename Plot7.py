@@ -10,7 +10,7 @@ weights = np.loadtxt('WeighIns.csv', unpack = True, delimiter = '\n')
 minX = [0, weights.size-7]
 
 #Plot 7 days
-plt.plot(weights[weights.size-365:weights.size], color='limegreen')
+plt.plot(weights[0:weights.size], color='limegreen')
 
 plt.title('Last 7 Days')
 plt.xlim([max(minX),weights.size-1])

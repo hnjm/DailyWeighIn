@@ -10,7 +10,7 @@ weights = np.loadtxt('WeighIns.csv', unpack = True, delimiter = '\n')
 minX = [364, weights.size-1]
 
 #Plot 365 days
-plt.plot(weights[weights.size-365:weights.size], color='gold')
+plt.plot(weights[0:weights.size], color='gold')
 
 plt.title('Last 365 Days')
 plt.xlim([0,min(minX)])
