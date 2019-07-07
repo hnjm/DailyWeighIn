@@ -9,16 +9,24 @@ currentDirectory = sys.argv[2]
 
 keyboard = Controller()
 
-#Press Windows Key
-keyboard.press(Key.cmd)
-keyboard.release(Key.cmd)
-
+#Get Command Prompt on Windows
+#Press Windows Key 
+#keyboard.press(Key.cmd)
+#keyboard.release(Key.cmd)
 #Search for Command Prompt
-time.sleep(2)
-keyboard.type("cmd")
-
+#time.sleep(2)
+#keyboard.type("cmd")
 #Open CMD
+#time.sleep(2)
+#keyboard.press(Key.enter)
+#keyboard.release(Key.enter)
+
+#Open Terminal on Mac
+with keyboard.pressed(Key.cmd):
+    keyboard.press(Key.space)
+    keyboard.release(Key.enter)
 time.sleep(2)
+keyboard.type("Terminal.app")
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
 

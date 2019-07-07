@@ -15,7 +15,10 @@ password = 'details'
 url = 'https://www.x4iiiis.com/admin'
 
 #Google Chrome webdriver location in downloads folder
-driver = webdriver.Chrome(r"C:\Users\ryan_\Downloads\chromedriver_win32\chromedriver.exe")
+#Windows
+#driver = webdriver.Chrome(r"C:\Users\ryan_\Downloads\chromedriver_win32\chromedriver.exe")
+#Mac
+driver = webdriver.Chrome();
 
 #Open Google Chrome and navigate to x4iiiis.com/admin
 driver.get(url)
